@@ -5,15 +5,20 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSquare } from "@fortawesome/free-regular-svg-icons";
 import { faSquareCheck } from "@fortawesome/free-solid-svg-icons";
 
-function Checkbox() {
+function Checkbox({checked = false, onClick}) {
   return (
-    <div>
-        <div className="checkbox">
+    <div onClick={onClick}>
+      {!checked && (
+        <div className="checkbox unchecked">
           <FontAwesomeIcon icon={faSquare} className="check-icon" />
         </div>
-        <div className="checkbox">
+      )}
+
+      {checked && (
+        <div className="checkbox checked">
           <FontAwesomeIcon icon={faSquareCheck} className="check-icon" />
         </div>
+      )}
     </div>
   );
 }
