@@ -10,12 +10,12 @@ function Title() {
 
   const handleTitleClick = () => {
     setEditingTitle(true);
-    setTitle(""); // Initialize title as empty string when clicked
+    setTitle(""); // Clear the title when editing starts
   };
 
   const handleTitleBlur = () => {
     setEditingTitle(false);
-    if (title.trim() === "") {
+    if (title.trim() === "") { // If the title is empty, reset it
       setTitle("list title here...");
     }
   };

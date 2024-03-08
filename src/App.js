@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./App.css";
 import TaskForm from "./components/TaskForm";
 import Task from "./components/Task";
@@ -7,6 +7,16 @@ import Title from "./components/Title";
 
 function App() {
   const [tasks, setTasks] = useState([]);
+
+  useEffect(() => {
+    if (tasks.length === 0) return;
+    localStorage.setItem("tasks", JSON.stringify(tasks));
+  }, [tasks]);
+
+  useEffect(() => {
+    const tasks = JSON.parse(localStorage.getItem("tasks"));
+    setTasks(tasks || []);
+  }, []);
 
   function addTask(task) {
     if (!task.text || /^\s*$/.test(task.text)) {
