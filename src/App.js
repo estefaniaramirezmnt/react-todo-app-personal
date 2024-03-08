@@ -1,6 +1,9 @@
+// App.js
+
 import React, { useState } from 'react';
 import './App.css';
 import TaskForm from './components/TaskForm';
+import Task from './components/Task';
 
 function App() {
   const [tasks, setTasks] = useState([]);
@@ -9,14 +12,15 @@ function App() {
     if (!task.text || /^\s*$/.test(task.text)) {
       return;
     }
-    const newTasks = [task, ...tasks];
+    const newTasks = [...tasks, task];
     setTasks(newTasks);
   }
-  
+
   return (
     <div className="App">
-     <h1>Hello world</h1>
-     <TaskForm onSubmit={addTask}/>
+      <h1>Hello world</h1>
+      <TaskForm onSubmit={addTask} />
+      <Task tasks={tasks} />
     </div>
   );
 }

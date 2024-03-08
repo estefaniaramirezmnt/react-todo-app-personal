@@ -1,10 +1,13 @@
+// TaskForm.js
+
 import React, {useState} from "react";
 
-function TaskForm() {
+function TaskForm( {onSubmit} ) {
   const [individualTask, setIndividualTask] = useState('');
 
   function handleSubmit(e) {
     e.preventDefault();
+    onSubmit({ text: individualTask }); // Envía el objeto task a la función onSubmit
     setIndividualTask("");
   }
 
