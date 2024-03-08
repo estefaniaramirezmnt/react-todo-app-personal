@@ -1,11 +1,11 @@
 import React, {useState} from "react";
 
 function TaskForm() {
-  const [task, setTask] = useState('');
+  const [individualTask, setIndividualTask] = useState('');
 
   function handleSubmit(e) {
     e.preventDefault();
-    setTask("");
+    setIndividualTask("");
   }
 
   return (
@@ -14,8 +14,8 @@ function TaskForm() {
         type="text" 
         placeholder="Add a task" 
         className="task-input" 
-        value={task}
-        onChange={(e) => setTask(e.target.value)}
+        value={individualTask}
+        onChange={(e) => setIndividualTask(e.target.value)}
       />
       <button className="button-add" type="submit">
         +
