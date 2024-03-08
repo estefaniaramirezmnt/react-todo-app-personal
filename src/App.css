@@ -18,12 +18,13 @@ h1, h3 {
 }
 
 h1 {
-  font-size: 1.4rem;
+  font-size: 1.3rem;
 }
 
 h3 {
-  font-size: 1.6rem;
+  font-size: 1.5rem;
 }
+
 .title-input{
   background: none;
   border: 3px solid #30313D;
@@ -37,11 +38,9 @@ h3 {
 }
 
 form {
-  /* align-items: center; */
   border: 3px solid #30313D;
   border-radius: 10px;
   display: flex;
-  /* justify-content: center; */
   padding: 5px;
 }
 
@@ -50,6 +49,7 @@ form input{
   border: 0;
   color: #fff;
   display: block;
+  font-size: 1.1rem;
   padding: 0 8px;
   width: 100%;
 }
@@ -127,6 +127,8 @@ div.task.done span:before {
   width: 100%;
 }
 
+/* For delete task*/
+
 .icons-container {
   display: flex;
   /* justify-content: flex-end; */
@@ -148,4 +150,43 @@ button.trash {
 
 .trash-icon:hover {
   color: #975fbc; 
+}
+
+/* Media Queries */
+
+@media (max-width: 450px) {
+  main {
+    max-width: 360px;
+  }
+
+  h1 {
+    font-size: 1.1rem;
+  }
+  
+  h3 {
+    font-size: 1.4rem;
+  }
+
+  form input{
+    font-size: 1rem;
+  }
+
+}
+
+@media (max-width: 410px) {
+  main {
+    max-width: 310px;
+  }
+}
+
+@media (max-width: 350px) {
+  main {
+    max-width: 260px;
+  }
+}
+
+@media (max-width: 290px) {
+  main {
+    max-width: 230px;
+  }
 }
