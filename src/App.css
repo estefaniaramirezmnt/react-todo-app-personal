@@ -172,3 +172,9 @@ button.trash {
     max-width: 260px;
   }
 }
+
+@media (max-width: 290px) {
+  main {
+    max-width: 230px;
+  }
+}
