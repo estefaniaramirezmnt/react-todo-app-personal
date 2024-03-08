@@ -5,6 +5,7 @@
 body {
   background-color: #17181f;
   color: #ddd;
+  font-family: "IBM Plex Mono", monospace;
   font-size: 1.2rem;
 }
 
@@ -32,6 +33,7 @@ h3 {
   border-radius: 10px;
   display: block;
   color: #fff;
+  font-family: "IBM Plex Mono", monospace;
   margin: 0 auto;
   margin-bottom: 18px;
   padding: 5px;
@@ -50,6 +52,7 @@ form input {
   border: 0;
   color: #fff;
   display: block;
+  font-family: "IBM Plex Mono", monospace;
   font-size: 1.1rem;
   padding: 0 8px;
   width: 100%;
