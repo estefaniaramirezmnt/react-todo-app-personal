@@ -17,6 +17,13 @@ h1, h3 {
   text-align: center;
 }
 
+h1 {
+  font-size: 1.4rem;
+}
+
+h3 {
+  font-size: 1.6rem;
+}
 .title-input{
   background: none;
   border: 3px solid #30313D;
@@ -78,7 +85,6 @@ div.task {
 }
 
 .check-icon {
-  display: inline;
   height: 20px;
   margin-right: 6px;
   color: #975fbc;
@@ -87,4 +93,34 @@ div.task {
 div.checkbox {
   align-items: center;
   display: inline;
+}
+
+/* When task is marked as completed*/
+
+div.task.done {
+  opacity: 0.3;
+}
+
+div.task-name,
+div.task form {
+  flex-grow: 1;
+}
+
+div.task span {
+  position: relative;
+}
+
+div.task span:before {
+  content: '';
+  display: block;
+  width: 0;
+  height: 1px;
+  background-color: #ddd;
+  position: absolute;
+  top: 12px;
+  transition: width .1s linear;
+}
+
+div.task.done span:before {
+  width: 100%;
 }

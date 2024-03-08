@@ -1,4 +1,4 @@
-// App.js 
+// App.js
 
 import React, { useEffect, useState } from "react";
 import "./App.css";
@@ -22,11 +22,18 @@ function App() {
   // {tasks.map((task, index) => (
   //   <div key={index}>{task.text}</div>
   // ))}
-  
 
   function addTask(name) {
     setTasks((prev) => {
       return [...prev, { name: name, done: false }];
+    });
+  }
+  
+  function updateTaskDone(taskIndex, newDone) {
+    setTasks((prev) => {
+      const newTasks = [...prev];
+      newTasks[taskIndex].done = newDone;
+      return newTasks;
     });
   }
 
@@ -35,7 +42,7 @@ function App() {
       <h1>
         <Typewriter
           options={{
-            strings: 'What are your tasks?',
+            strings: "What are your tasks?",
             autoStart: true,
             delay: 100,
           }}
@@ -44,7 +51,12 @@ function App() {
       <Title />
       <TaskForm onSubmit={addTask} />
       {tasks.map((task, index) => (
-        <Task key={index} name={task.name} />
+        <Task
+          key={index}
+          name={task.name}
+          done={task.done}
+          onToggle={(done) => updateTaskDone(index, done)}
+        />
         // <Task {...task}/>
       ))}
     </main>
