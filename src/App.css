@@ -10,7 +10,7 @@ body {
 
 main {
   margin: 40px auto;
-  max-width: 450px;
+  max-width: 400px;
 }
 
 h1, h3 {
@@ -37,9 +37,11 @@ h3 {
 }
 
 form {
+  /* align-items: center; */
   border: 3px solid #30313D;
   border-radius: 10px;
   display: flex;
+  /* justify-content: center; */
   padding: 5px;
 }
 
@@ -92,7 +94,7 @@ div.task {
 
 div.checkbox {
   align-items: center;
-  display: inline;
+  /* display: inline; */
 }
 
 /* When task is marked as completed*/
@@ -123,4 +125,27 @@ div.task span:before {
 
 div.task.done span:before {
   width: 100%;
+}
+
+.icons-container {
+  display: flex;
+  /* justify-content: flex-end; */
+  width: 100%;
+}
+
+button.trash {
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-right: 0px;
+  margin-left: auto;
+}
+
+.trash-icon {
+  color: #888;
+  transition: all .3s ease-in-out;
+}
+
+.trash-icon:hover {
+  color: #975fbc; 
 }

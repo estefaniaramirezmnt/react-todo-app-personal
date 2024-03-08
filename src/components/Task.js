@@ -1,6 +1,8 @@
 // Task.js
 import React from "react";
 import Checkbox from "./Checkbox";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faTrash } from "@fortawesome/free-solid-svg-icons";
 
 function Task({ name, done, onToggle }) {
   return (
@@ -8,6 +10,11 @@ function Task({ name, done, onToggle }) {
       <Checkbox checked={done} onClick={() => onToggle(!done)} />
       <div>
         <span className="task-name">{name}</span>
+      </div>
+      <div className="icons-container">
+        <button className="trash">
+          <FontAwesomeIcon icon={faTrash} className="trash-icon" />
+        </button>
       </div>
     </div>
   );
