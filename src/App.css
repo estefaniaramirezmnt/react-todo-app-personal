@@ -145,6 +145,7 @@ button.trash {
 
 .trash-icon {
   color: #888;
+  font-size: 18px;
   transition: all .3s ease-in-out;
 }
 
