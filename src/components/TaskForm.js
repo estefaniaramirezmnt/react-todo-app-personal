@@ -7,8 +7,10 @@ function TaskForm( {onSubmit} ) {
 
   function handleSubmit(e) {
     e.preventDefault();
-    onSubmit({ text: individualTask }); // Envía el objeto task a la función onSubmit
-    setIndividualTask("");
+    if (!/^\s*$/.test(individualTask)) {
+      onSubmit(individualTask);
+      setIndividualTask("");
+    }
   }
 
   return (

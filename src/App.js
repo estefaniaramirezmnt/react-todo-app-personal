@@ -1,3 +1,5 @@
+// App.js 
+
 import React, { useEffect, useState } from "react";
 import "./App.css";
 import TaskForm from "./components/TaskForm";
@@ -8,22 +10,24 @@ import Title from "./components/Title";
 function App() {
   const [tasks, setTasks] = useState([]);
 
-  useEffect(() => {
-    if (tasks.length === 0) return;
-    localStorage.setItem("tasks", JSON.stringify(tasks));
-  }, [tasks]);
+  // useEffect(() => {
+  //   if (tasks.length === 0) return;
+  //   localStorage.setItem("tasks", JSON.stringify(tasks));
+  // }, [tasks]);
 
-  useEffect(() => {
-    const tasks = JSON.parse(localStorage.getItem("tasks"));
-    setTasks(tasks || []);
-  }, []);
+  // useEffect(() => {
+  //   const tasks = JSON.parse(localStorage.getItem("tasks"));
+  //   setTasks(tasks || []);
+  // }, []);
+  // {tasks.map((task, index) => (
+  //   <div key={index}>{task.text}</div>
+  // ))}
+  
 
-  function addTask(task) {
-    if (!task.text || /^\s*$/.test(task.text)) {
-      return;
-    }
-    const newTasks = [...tasks, task];
-    setTasks(newTasks);
+  function addTask(name) {
+    setTasks((prev) => {
+      return [...prev, { name: name, done: false }];
+    });
   }
 
   return (
@@ -39,7 +43,10 @@ function App() {
       </h1>
       <Title />
       <TaskForm onSubmit={addTask} />
-      <Task tasks={tasks} />
+      {tasks.map((task, index) => (
+        <Task key={index} name={task.name} />
+        // <Task {...task}/>
+      ))}
     </div>
   );
 }

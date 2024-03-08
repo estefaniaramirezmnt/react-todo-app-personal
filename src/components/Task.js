@@ -1,14 +1,14 @@
 // Task.js
-import React from 'react';
+import React from "react";
+import Checkbox from "./Checkbox";
 
-function Task({ tasks }) {
+function Task({ name }) {
   return (
     <div>
-      {tasks.map((task, index) => (
-        <div key={index}>{task.text}</div>
-      ))}
+        <Checkbox />
+        <span>{name}</span>
     </div>
-  );
+  )
 }
 
 export default Task;
