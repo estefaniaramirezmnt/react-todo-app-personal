@@ -1,10 +1,9 @@
-// App.js
-
 import React, { useState } from "react";
 import "./App.css";
 import TaskForm from "./components/TaskForm";
 import Task from "./components/Task";
 import Typewriter from "typewriter-effect";
+import Title from "./components/Title";
 
 function App() {
   const [tasks, setTasks] = useState([]);
@@ -14,7 +13,6 @@ function App() {
       return;
     }
     const newTasks = [...tasks, task];
-    // [...tasks, task] renders the new task at the end of the list
     setTasks(newTasks);
   }
 
@@ -23,12 +21,13 @@ function App() {
       <h1>
         <Typewriter
           options={{
-            strings: 'Your task list title here!',
+            strings: 'What are your tasks?',
             autoStart: true,
             delay: 100,
           }}
         />
       </h1>
+      <Title />
       <TaskForm onSubmit={addTask} />
       <Task tasks={tasks} />
     </div>
