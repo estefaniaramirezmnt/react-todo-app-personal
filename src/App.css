@@ -127,6 +127,8 @@ div.task.done span:before {
   width: 100%;
 }
 
+/* For delete task*/
+
 .icons-container {
   display: flex;
   /* justify-content: flex-end; */
@@ -148,4 +150,25 @@ button.trash {
 
 .trash-icon:hover {
   color: #975fbc; 
+}
+
+/* Media Queries */
+
+@media (max-width: 450px) {
+  main {
+    max-width: 360px;
+  }
+
+}
+
+@media (max-width: 410px) {
+  main {
+    max-width: 310px;
+  }
+}
+
+@media (max-width: 350px) {
+  main {
+    max-width: 260px;
+  }
 }
