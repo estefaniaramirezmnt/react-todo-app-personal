@@ -39,6 +39,7 @@ function Title() {
           onBlur={handleTitleBlur}
           onKeyDown={handleKeyDown}
           autoFocus
+          className="title-input"
         />
       ) : (
         <h3 onClick={handleTitleClick}>{title}</h3>

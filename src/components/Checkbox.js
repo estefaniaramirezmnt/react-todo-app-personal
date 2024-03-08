@@ -8,11 +8,10 @@ import { faSquareCheck } from "@fortawesome/free-solid-svg-icons";
 function Checkbox() {
   return (
     <div>
-        <div className="checkbox unchecked">
+        <div className="checkbox">
           <FontAwesomeIcon icon={faSquare} className="check-icon" />
         </div>
-
-        <div className="checkbox checked">
+        <div className="checkbox">
           <FontAwesomeIcon icon={faSquareCheck} className="check-icon" />
         </div>
     </div>

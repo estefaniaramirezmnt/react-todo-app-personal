@@ -22,7 +22,7 @@ function TaskForm( {onSubmit} ) {
         value={individualTask}
         onChange={(e) => setIndividualTask(e.target.value)}
       />
-      <button className="button-add" type="submit">
+      <button type="submit">
         +
       </button>
     </form>

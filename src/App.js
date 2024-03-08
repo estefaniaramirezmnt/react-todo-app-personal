@@ -31,7 +31,7 @@ function App() {
   }
 
   return (
-    <div className="App">
+    <main>
       <h1>
         <Typewriter
           options={{
@@ -47,7 +47,7 @@ function App() {
         <Task key={index} name={task.name} />
         // <Task {...task}/>
       ))}
-    </div>
+    </main>
   );
 }
 

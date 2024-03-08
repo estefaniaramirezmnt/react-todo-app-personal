@@ -4,11 +4,13 @@ import Checkbox from "./Checkbox";
 
 function Task({ name }) {
   return (
-    <div>
-        <Checkbox />
-        <span>{name}</span>
+    <div className="task">
+      <Checkbox />
+      <div>
+        <span className="task-name">{name}</span>
+      </div>
     </div>
-  )
+  );
 }
 
 export default Task;
