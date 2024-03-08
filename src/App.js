@@ -19,9 +19,9 @@ function App() {
     const tasks = JSON.parse(localStorage.getItem("tasks"));
     setTasks(tasks || []);
   }, []);
-  {tasks.map((task, index) => (
-    <div key={index}>{task.text}</div>
-  ))}
+  {
+    tasks.map((task, index) => <div key={index}>{task.text}</div>);
+  }
 
   function addTask(name) {
     setTasks((prev) => {
