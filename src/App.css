@@ -216,3 +216,11 @@ div.task input:focus {
     max-width: 230px;
   }
 }
+
+/*App width for xxl screens*/
+
+@media (min-width: 1400px) {
+  main {
+    max-width: 600px;
+  }
+}
