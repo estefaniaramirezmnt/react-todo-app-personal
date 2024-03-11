@@ -110,6 +110,10 @@ div.task {
   margin-right: 6px;
 }
 
+span.task-name {
+  font-size: 1.1rem;
+}
+
 /* When task is marked as completed*/
 
 div.task.done {
@@ -195,6 +199,10 @@ div.task input:focus {
 
   form input {
     font-size: 1rem;
+  }
+
+  span.task-name {
+    font-size: 0.9rem;
   }
 
 }
