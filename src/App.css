@@ -73,7 +73,7 @@ form button {
   font-weight: 500;
   height: 1;
   line-height: 1;
-  padding: 0px 5px;
+  padding: 0em 0.3em;
   text-align: center;
   transition: all .3s ease-in-out;
 }
@@ -132,7 +132,7 @@ div.task span:before {
   height: 1px;
   background-color: #ddd;
   position: absolute;
-  top: 17px;
+  top: 0.7em;
   transition: width .1s linear;
 }
 
