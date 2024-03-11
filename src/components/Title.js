@@ -1,8 +1,15 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 function Title() {
-  const [title, setTitle] = useState("list title here...");
+  const [title, setTitle] = useState(() => {
+    const storedTitle = localStorage.getItem("title");
+    return storedTitle ? storedTitle : "list title here...";
+  });
   const [editingTitle, setEditingTitle] = useState(false);
+
+  useEffect(() => {
+    localStorage.setItem("title", title);
+  }, [title]);
 
   const handleTitleChange = (e) => {
     setTitle(e.target.value);
@@ -15,7 +22,8 @@ function Title() {
 
   const handleTitleBlur = () => {
     setEditingTitle(false);
-    if (title.trim() === "") { // If the title is empty, reset it
+    if (title.trim() === "") {
+      // If the title is empty, reset it
       setTitle("list title here...");
     }
   };

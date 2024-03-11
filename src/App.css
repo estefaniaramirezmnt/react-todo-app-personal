@@ -105,13 +105,9 @@ div.task {
 }
 
 .check-icon {
+  color: #975fbc;
   height: 20px;
   margin-right: 6px;
-  color: #975fbc;
-}
-
-div.checkbox {
-  align-items: center;
 }
 
 /* When task is marked as completed*/
