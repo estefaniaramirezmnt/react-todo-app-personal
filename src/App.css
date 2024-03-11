@@ -60,6 +60,7 @@ form input {
 
 .task-input:focus,
 .title-input:focus {
+  border-color: #975fbc;
   outline: none;
 }
 
@@ -94,9 +95,13 @@ div.task {
   background-color: #30313D;
   border-radius: 10px;
   display: flex;
-  padding: 5px 9px;
+  padding: 7px 10px;
   margin-top: 5px;
   transition: opacity .3s linear;
+}
+
+.task-container {
+  width: 100%;
 }
 
 .check-icon {
@@ -139,14 +144,14 @@ div.task.done span:before {
   width: 100%;
 }
 
-/* For delete task*/
+/* For delete and edit task*/
 
 .icons-container {
   display: flex;
-  width: 100%;
 }
 
-button.trash {
+button.trash,
+button.edit {
   background: none;
   border: none;
   cursor: pointer;
@@ -154,14 +159,27 @@ button.trash {
   margin-left: auto;
 }
 
-.trash-icon {
+.trash-icon,
+.edit-icon {
   color: #888;
-  font-size: 18px;
+  font-size: 20px;
   transition: all .3s ease-in-out;
 }
 
-.trash-icon:hover {
+.trash-icon:hover,
+.edit-icon:hover {
   color: #975fbc;
+}
+
+div.task input {
+  border: 2px solid #555;
+  border-radius: 5px;
+  padding: 2px
+}
+
+div.task input:focus {
+  border-color: #975fbc;
+  outline: none;
 }
 
 /* Media Queries */

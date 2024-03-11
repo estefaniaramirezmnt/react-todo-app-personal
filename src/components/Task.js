@@ -32,7 +32,7 @@ function Task({ name, done, onToggle, onTrash, onRename }) {
     <div className={"task " + (done ? "done" : "")}>
       <Checkbox checked={done} onClick={() => onToggle(!done)} />
       {!editMode && (
-        <div>
+        <div className="task-container">
           <span className="task-name" onClick={handleEditClick}>
             {name}
           </span>
