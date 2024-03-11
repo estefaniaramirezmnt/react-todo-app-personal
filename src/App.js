@@ -16,8 +16,8 @@ function App() {
   }, [tasks]);
 
   useEffect(() => {
-    const tasks = JSON.parse(localStorage.getItem("tasks"));
-    setTasks(tasks || []);
+    const storageTasks = JSON.parse(localStorage.getItem("tasks"));
+    setTasks(storageTasks || []);
   }, []);
 
   function addTask(name) {
@@ -42,6 +42,14 @@ function App() {
     });
   }
 
+  function renameTask(taskIndex, newName) {
+    setTasks((prev) => {
+      const newTasks = [...prev];
+      newTasks[taskIndex].name = newName;
+      return newTasks;
+    });
+  }
+
   return (
     <main>
       <h1>
@@ -62,6 +70,7 @@ function App() {
           done={task.done}
           onTrash={() => removeTask(index)}
           onToggle={(done) => updateTaskDone(index, done)}
+          onRename={(newName) => renameTask(index, newName)}
         />
         // <Task {...task}/>
       ))}
