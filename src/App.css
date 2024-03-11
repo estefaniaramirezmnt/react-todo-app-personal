@@ -1,6 +1,6 @@
-* {
+/* * {
   box-sizing: border-box;
-}
+} */
 
 body {
   background-color: #17181f;
@@ -132,7 +132,7 @@ div.task span:before {
   height: 1px;
   background-color: #ddd;
   position: absolute;
-  top: 12px;
+  top: 17px;
   transition: width .1s linear;
 }
 
